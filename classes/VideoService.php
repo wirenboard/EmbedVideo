@@ -65,6 +65,16 @@ class VideoService {
 				'#^([\d\w\-\+]+)$#is'
 			]
 		],
+		'cloudflarestream' => [
+			'embed'			=> '<div style="position: relative; padding-top: 56.25%%;"><iframe src="%1$s" loading="lazy" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true" width="%2$d" height="%3$d"></iframe></div>',
+			'default_width'	=> 640,
+			'default_ratio'	=> 1.77777777777778, // (16 / 9)
+			'https_enabled'	=> true,
+			'url_regex'		=> [
+				'#(.*cloudflarestream\.com/.*)#is'
+			],
+			'id_regex'		=> []  // ID insert is not supported
+		],
 		'disclose' => [
 			'embed'			=> '<iframe title="%4$s" src="//www.disclose.tv/embed/%1$s" width="%2$d" height="%3$d" frameborder="0" allowfullscreen="true"></iframe>',
 			'default_width'	=> 640,
@@ -520,6 +530,7 @@ class VideoService {
 		'beam.pro' 					=> 'beam',
 		'blip.tv'					=> 'blip',
 		'bing.com'					=> 'bing',
+		'cloudflarestream.com'			=> 'cloudflarestream',
 		'collegehumor.com'			=> 'collegehumor',
 		'dailymotion.com'			=> 'dailymotion',
 		'divshare.com'				=> 'divshare',

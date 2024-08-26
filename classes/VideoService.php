@@ -529,8 +529,19 @@ class VideoService {
 			'id_regex'		=> [
 				'#^([\d\w-]+)$#is'
 			]
+		],
+		'peertube_wb_playlist' => [
+			'embed'			=> '<iframe title="%4$s" src="https://peertube.wirenboard.com/video-playlists/embed/%1$s?warningTitle=0&amp;p2p=0&amp;%5$s" width="%2$d" height="%3$d" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" frameborder="0"></iframe>',
+			'default_width'	=> 560,
+			'default_ratio'	=> 1.77777777777778, // (16 / 9)
+			'https_enabled'	=> true,
+			'url_regex'		=> [
+				'#peertube\.wirenboard\.com/video-playlists/embed/([\d\w-]+)(?:\?([\d\w=-]+))?#is',
+			],
+			'id_regex'		=> []
 		]
 	];
+
 
 	/**
 	 * Mapping of host names to services
@@ -573,7 +584,7 @@ class VideoService {
 		'screen.yahoo.com'			=> 'yahoo',
 		'youtube.com'				=> ['youtube', 'youtubeplaylist', 'youtubevideolist'],
 		'youku.com'					=> 'youku',
-		'peertube.wirenboard.com'	=> 'peertube_wb',
+		'peertube.wirenboard.com'	=> ['peertube_wb', 'peertube_wb_playlist']
 	];
 
 	/**

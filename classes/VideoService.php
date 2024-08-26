@@ -523,7 +523,8 @@ class VideoService {
 			'default_ratio'	=> 1.77777777777778, // (16 / 9)
 			'https_enabled'	=> true,
 			'url_regex'		=> [
-				'#peertube\.wirenboard\.com/videos/embed/([\d\w-]+)#is'
+				'#peertube\.wirenboard\.com/videos/embed/([\d\w-]+)#is',
+				'#peertube\.wirenboard\.com/w/([\d\w-]+)#is'
 			],
 			'id_regex'		=> [
 				'#^([\d\w-]+)$#is'

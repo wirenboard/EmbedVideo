@@ -516,6 +516,18 @@ class VideoService {
 			'id_regex'		=> [
 				'#^(?:id_)?([\d\w-]+)$#is'
 			]
+		],
+		'peertube_wb' => [
+			'embed'			=> '<iframe title="%4$s" src="https://peertube.wirenboard.com/videos/embed/%1$s?warningTitle=0&amp;p2p=0" width="%2$d" height="%3$d" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" frameborder="0"></iframe>',
+			'default_width'	=> 560,
+			'default_ratio'	=> 1.77777777777778, // (16 / 9)
+			'https_enabled'	=> true,
+			'url_regex'		=> [
+				'#peertube\.wirenboard\.com/videos/embed/([\d\w-]+)#is'
+			],
+			'id_regex'		=> [
+				'#^([\d\w-]+)$#is'
+			]
 		]
 	];
 
@@ -559,7 +571,8 @@ class VideoService {
 		'vine.co'					=> 'vine',
 		'screen.yahoo.com'			=> 'yahoo',
 		'youtube.com'				=> ['youtube', 'youtubeplaylist', 'youtubevideolist'],
-		'youku.com'					=> 'youku'
+		'youku.com'					=> 'youku',
+		'peertube.wirenboard.com'	=> 'peertube_wb',
 	];
 
 	/**

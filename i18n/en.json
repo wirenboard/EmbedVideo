@@ -58,5 +58,7 @@
 	"apihelp-embedvideo-param-description": "Description of video",
 	"apihelp-embedvideo-param-container": "Accepts frame, or leave empty",
 	"apihelp-embedvideo-param-urlargs": "Additional arguments to pass in the video url (for some services)",
-	"apihelp-embedvideo-param-autoresize": "Auto resize video? (true or false)"
+	"apihelp-embedvideo-param-autoresize": "Auto resize video? (true or false)",
+	"embedvideo-service-peertubewb": "PeerTube (wirenboard.com)",
+	"embedvideo-service-peertubewbplaylist": "PeerTube playlist (wirenboard.com)"
 }

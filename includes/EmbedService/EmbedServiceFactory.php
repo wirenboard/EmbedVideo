@@ -48,6 +48,8 @@ final class EmbedServiceFactory {
 		Loom::class,
 		NaverTV::class,
 		Niconico::class,
+		PeertubeWb::class,
+		PeertubeWbPlaylist::class,
 		SharePoint::class,
 		SoundCloud::class,
 		SpotifyAlbum::class,
@@ -137,6 +139,18 @@ final class EmbedServiceFactory {
 			case 'navertv':
 			case 'tv.naver':
 				return new NaverTV( $id );
+
+			case 'peertube':
+			case 'peertube_wb':
+			case 'peertube.wirenboard':
+			case 'peertubewb':
+				return new PeertubeWb( $id );
+
+			case 'peertubeplaylist':
+			case 'peertube_wb_playlist':
+			case 'peertube.wirenboard.playlist':
+			case 'peertubewbplaylist':
+				return new PeertubeWbPlaylist( $id );
 
 			case 'sharepoint':
 				return new SharePoint( $id );

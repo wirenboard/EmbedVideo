@@ -27,5 +27,7 @@
 	"embedvideo-service-youtube": "{{Optional}}",
 	"embedvideo-service-youku": "{{Optional}}\n\nName of https://www.youku.com/ service.",
 	"embedvideo-video-short-desc": "{{Optional}}",
-	"embedvideo-audio-short-desc": "{{Optional}}"
+	"embedvideo-audio-short-desc": "{{Optional}}",
+	"embedvideo-service-peertubewb": "{{Optional}}",
+	"embedvideo-service-peertubewbplaylist": "{{Optional}}"
 }
